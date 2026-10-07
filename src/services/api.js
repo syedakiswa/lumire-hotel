@@ -1,4 +1,7 @@
-const API_BASE = "/api";
+// Reusable API base configuration
+// Defaults to "/api" in production builds
+// Can be customized in local development via VITE_API_URL
+const API_BASE = (import.meta.env.VITE_API_URL || "/api").replace(/\/+$/, "");
 
 function getHeaders() {
   const token = localStorage.getItem("lumiere_token");

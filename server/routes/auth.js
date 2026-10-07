@@ -7,11 +7,9 @@ import {
   createUser,
 } from "../services/dataStore.js";
 import { authenticate } from "../middleware/auth.js";
+import { getJwtSecret } from "../services/authConfig.js";
 
 const router = express.Router();
-const JWT_SECRET =
-  process.env.JWT_SECRET ||
-  "lumiere_grand_hotel_luxury_jwt_secret_key_2026_xyz987";
 
 // POST /api/auth/register
 router.post("/register", async (req, res) => {
@@ -68,7 +66,7 @@ router.post("/register", async (req, res) => {
         name: newUser.name,
         role: "user",
       },
-      JWT_SECRET,
+      getJwtSecret(),
       { expiresIn: "7d" }
     );
 
@@ -128,7 +126,7 @@ router.post("/login", async (req, res) => {
         name: user.name,
         role: user.role,
       },
-      JWT_SECRET,
+      getJwtSecret(),
       { expiresIn: "7d" }
     );
 

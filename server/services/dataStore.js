@@ -13,9 +13,13 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const DATA_DIR = path.join(__dirname, "../data");
 
-// Ensure data directory exists
-if (!fs.existsSync(DATA_DIR)) {
-  fs.mkdirSync(DATA_DIR, { recursive: true });
+// Safely ensure data directory exists in environments where disk write is permitted
+try {
+  if (!fs.existsSync(DATA_DIR)) {
+    fs.mkdirSync(DATA_DIR, { recursive: true });
+  }
+} catch {
+  // Read-only filesystem in serverless environments (e.g. Vercel)
 }
 
 const FILES = {
@@ -29,13 +33,11 @@ const FILES = {
 function readJsonFile(filePath, defaultValue = []) {
   try {
     if (!fs.existsSync(filePath)) {
-      fs.writeFileSync(filePath, JSON.stringify(defaultValue, null, 2), "utf8");
       return defaultValue;
     }
     const data = fs.readFileSync(filePath, "utf8");
     return JSON.parse(data || "[]");
-  } catch (err) {
-    console.error(`Error reading ${filePath}:`, err);
+  } catch {
     return defaultValue;
   }
 }
@@ -43,8 +45,9 @@ function readJsonFile(filePath, defaultValue = []) {
 function writeJsonFile(filePath, data) {
   try {
     fs.writeFileSync(filePath, JSON.stringify(data, null, 2), "utf8");
-  } catch (err) {
-    console.error(`Error writing ${filePath}:`, err);
+  } catch {
+    // In serverless read-only environments, disk writes are ignored.
+    // MongoDB / Mongoose is the persistent database.
   }
 }
 
