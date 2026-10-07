@@ -12,6 +12,7 @@ import {
   X,
   AlertTriangle,
 } from "lucide-react";
+import PageMeta from "../../components/PageMeta";
 
 export default function AdminBookings() {
   const [bookings, setBookings] = useState([]);
@@ -76,6 +77,10 @@ export default function AdminBookings() {
 
   return (
     <div>
+      <PageMeta
+        title="Bookings Management | Lumière Grand Hotel Admin"
+        description="Monitor, verify, update, and manage all guest reservations and dossiers."
+      />
       {/* Header */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between pb-6 border-b border-white/10 gap-4">
         <div>

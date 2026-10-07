@@ -3,6 +3,7 @@ import { Link, useNavigate, useSearchParams } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
 import { api } from "../services/api";
 import { generateBookingInvoice } from "../utils/generateInvoice";
+import PageMeta from "../components/PageMeta";
 import {
   Calendar,
   Clock,
@@ -98,6 +99,10 @@ export default function UserAccount() {
 
   return (
     <div className="min-h-screen bg-black text-white py-12 md:py-20">
+      <PageMeta
+        title="My Account & Bookings | Lumière Grand Hotel"
+        description="Manage your luxury hotel bookings, download official PDF invoices, and review your guest profile at Lumière Grand Hotel."
+      />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header banner */}
         <div data-aos="fade-up" className="border-b border-white/10 pb-8 flex flex-col md:flex-row md:items-end justify-between gap-6">

@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import PageMeta from "./PageMeta";
 import {
   Sparkles,
   Wine,
@@ -51,6 +52,10 @@ const features = [
 function Amenities() {
   return (
     <div className="bg-black text-white">
+      <PageMeta
+        title="Amenities & Services | Lumière Grand Hotel"
+        description="Indulge in 5-star hotel amenities including our luxury wellness spa, rooftop sky lounge, 24/7 dedicated concierge, and valet parking services."
+      />
 
       {/* ================= HERO ================= */}
       <section className="border-b border-white/10 py-20 md:py-28">

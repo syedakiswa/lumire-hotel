@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import AOS from "aos";
 import { BedDouble, Users, Eye, ArrowRight } from "lucide-react";
 import { api } from "../services/api";
+import PageMeta from "./PageMeta";
 
 const HERO_IMAGE = "/roomsbg.png";
 const DEFAULT_ROOM_IMAGE = "/room.jpeg";
@@ -112,6 +113,10 @@ function RoomsSuite() {
 
   return (
     <>
+      <PageMeta
+        title="Rooms & Suites | Lumière Grand Hotel"
+        description="Explore our luxurious presidential suites, deluxe rooms, and executive accommodations designed for exceptional comfort."
+      />
       {/* ================= HERO ================= */}
       <section
         className="relative h-[280px] sm:h-[340px] md:h-[400px] bg-cover bg-center bg-no-repeat"

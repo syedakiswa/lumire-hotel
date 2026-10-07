@@ -1,8 +1,13 @@
 import { Link } from "react-router-dom";
+import PageMeta from "./PageMeta";
 
 function Hero() {
   return (
     <>
+      <PageMeta
+        title="LUMIÈRE GRAND HOTEL | 5-Star Luxury Stays & Suites"
+        description="Experience refined elegance, world-class suites, fine dining, and unforgettable hospitality at Lumière Grand Hotel."
+      />
       {/* Hero Section */}
       <section className="relative min-h-[600px] md:min-h-[80vh] flex items-center overflow-hidden">
         {/* Hero Image */}

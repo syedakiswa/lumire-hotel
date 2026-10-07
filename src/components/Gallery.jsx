@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import AOS from "aos";
 import { Eye, X } from "lucide-react";
+import PageMeta from "./PageMeta";
 
 const HERO_IMAGE = "/hero1.png";
 
@@ -62,6 +63,10 @@ function Gallery() {
 
   return (
     <div className="bg-black text-white">
+      <PageMeta
+        title="Gallery | Lumière Grand Hotel"
+        description="Experience the visual elegance of Lumière Grand Hotel. View our luxury suites, fine dining spaces, wellness facilities, and grand architecture."
+      />
 
       {/* ================= HERO ================= */}
       <section

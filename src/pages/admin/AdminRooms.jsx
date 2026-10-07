@@ -10,6 +10,7 @@ import {
   RefreshCw,
   Image as ImageIcon,
 } from "lucide-react";
+import PageMeta from "../../components/PageMeta";
 
 export default function AdminRooms() {
   const [rooms, setRooms] = useState([]);
@@ -151,6 +152,10 @@ export default function AdminRooms() {
 
   return (
     <div>
+      <PageMeta
+        title="Room Inventory Management | Lumière Grand Hotel Admin"
+        description="Add, modify, and manage suite availability, configurations, and amenities."
+      />
       {/* Header */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between pb-6 border-b border-white/10 gap-4">
         <div>

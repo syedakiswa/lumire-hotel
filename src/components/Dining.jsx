@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Phone, Mail, MapPin } from "lucide-react";
 import { api } from "../services/api";
+import PageMeta from "./PageMeta";
 
 // ---- Images: put a path (e.g. "/dining-hero.jpg") or leave "" for placeholder ----
 const HERO_IMAGE = "/diningbg.png";
@@ -208,6 +209,10 @@ function Dining() {
 
   return (
     <div className="bg-black text-white">
+      <PageMeta
+        title="Dining & Restaurants | Lumière Grand Hotel"
+        description="Experience exquisite fine dining at The Grand Restaurant, cocktails at Sky Lounge, and fresh seafood at Poolside Grill. Reserve your table online."
+      />
 
       {/* ================= 1. HERO ================= */}
       <section className="relative h-[380px] sm:h-[460px] md:h-[540px] overflow-hidden">

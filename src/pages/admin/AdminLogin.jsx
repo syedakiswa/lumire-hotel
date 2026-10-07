@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useNavigate, useLocation, Link } from "react-router-dom";
 import { useAuth } from "../../context/AuthContext";
 import { Lock, Mail, ShieldAlert, ArrowLeft } from "lucide-react";
+import PageMeta from "../../components/PageMeta";
 
 export default function AdminLogin() {
   const [email, setEmail] = useState("");
@@ -41,6 +42,10 @@ export default function AdminLogin() {
 
   return (
     <div className="min-h-screen bg-black text-white flex flex-col justify-center py-12 sm:px-6 lg:px-8 relative">
+      <PageMeta
+        title="Admin Portal Login | Lumière Grand Hotel"
+        description="Secure administrative access for Lumière Grand Hotel staff, management, and operations."
+      />
       <div className="sm:mx-auto sm:w-full sm:max-w-md px-4">
         <Link
           to="/"

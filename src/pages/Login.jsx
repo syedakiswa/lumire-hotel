@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
 import { Lock, Mail, AlertCircle, ArrowLeft } from "lucide-react";
+import PageMeta from "../components/PageMeta";
 
 export default function Login() {
   const [email, setEmail] = useState("");
@@ -42,6 +43,10 @@ export default function Login() {
 
   return (
     <div className="min-h-screen bg-black text-white flex flex-col justify-center py-12 sm:px-6 lg:px-8 relative overflow-hidden">
+      <PageMeta
+        title="Guest Login | Lumière Grand Hotel"
+        description="Sign in to your Lumière Grand Hotel guest account to manage luxury reservations, check-in schedules, and invoices."
+      />
       {/* Background visual accents */}
       <div className="absolute inset-0 bg-radial from-amber-500/5 via-transparent to-transparent pointer-events-none"></div>
 

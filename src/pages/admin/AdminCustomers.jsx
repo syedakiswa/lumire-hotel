@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { api } from "../../services/api";
 import { Users, Mail, Phone, Calendar, DollarSign, RefreshCw } from "lucide-react";
+import PageMeta from "../../components/PageMeta";
 
 export default function AdminCustomers() {
   const [customers, setCustomers] = useState([]);
@@ -28,6 +29,10 @@ export default function AdminCustomers() {
 
   return (
     <div>
+      <PageMeta
+        title="Customer Management | Lumière Grand Hotel Admin"
+        description="Registered customer directory, stay counts, and lifetime revenue contribution."
+      />
       {/* Header */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between pb-6 border-b border-white/10 gap-4">
         <div>

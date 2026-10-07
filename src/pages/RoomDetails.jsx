@@ -3,6 +3,7 @@ import { Link, useParams, useNavigate, useLocation } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
 import { api } from "../services/api";
 import { generateBookingInvoice } from "../utils/generateInvoice";
+import PageMeta from "../components/PageMeta";
 import {
   Wifi,
   Snowflake,
@@ -205,6 +206,13 @@ export default function RoomDetails() {
 
   return (
     <div className="bg-black text-white min-h-screen">
+      <PageMeta
+        title={`${room.name} | Lumière Grand Hotel`}
+        description={
+          room.description ||
+          `Reserve the ${room.name} at Lumière Grand Hotel. Features luxury comfort, elegant amenities, and world-class service.`
+        }
+      />
       <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-16 py-8 md:py-12">
         {/* ================= BREADCRUMB ================= */}
         <div className="flex flex-wrap items-center justify-between gap-3 text-sm">

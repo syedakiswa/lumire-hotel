@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
 import { api } from "../services/api";
+import PageMeta from "./PageMeta";
 
 const HERO_IMAGE = "/contactusbg.jpg";
 
@@ -59,6 +60,10 @@ function ContactUs() {
 
   return (
     <div className="bg-black text-white">
+      <PageMeta
+        title="Contact Us & Inquiries | Lumière Grand Hotel"
+        description="Connect with our 24/7 guest relations and concierge team for bookings, dining reservations, events, and general assistance."
+      />
 
       {/* ================= 1. HERO ================= */}
       <section className="relative h-[320px] sm:h-[400px] md:h-[460px] overflow-hidden">

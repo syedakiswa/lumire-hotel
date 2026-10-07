@@ -11,6 +11,7 @@ import {
   ArrowRight,
   RefreshCw,
 } from "lucide-react";
+import PageMeta from "../../components/PageMeta";
 
 export default function AdminDashboard() {
   const [stats, setStats] = useState(null);
@@ -52,6 +53,10 @@ export default function AdminDashboard() {
   if (loading) {
     return (
       <div className="py-24 text-center">
+        <PageMeta
+          title="Admin Dashboard | Lumière Grand Hotel"
+          description="Real-time hotel intelligence, occupancy metrics, revenue breakdown, and reservation operations."
+        />
         <div className="w-10 h-10 border-2 border-amber-400 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
         <p className="text-xs uppercase tracking-[3px] text-gray-400">Loading hotel metrics...</p>
       </div>
@@ -60,6 +65,10 @@ export default function AdminDashboard() {
 
   return (
     <div>
+      <PageMeta
+        title="Admin Dashboard | Lumière Grand Hotel"
+        description="Real-time hotel intelligence, occupancy metrics, revenue breakdown, and reservation operations."
+      />
       {/* Top Banner */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between pb-6 border-b border-white/10 gap-4">
         <div>

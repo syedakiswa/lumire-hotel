@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { api } from "../../services/api";
 import { DollarSign, Save, RefreshCw, CheckCircle2 } from "lucide-react";
+import PageMeta from "../../components/PageMeta";
 
 export default function AdminPricing() {
   const [rooms, setRooms] = useState([]);
@@ -67,6 +68,10 @@ export default function AdminPricing() {
 
   return (
     <div>
+      <PageMeta
+        title="Suite Pricing & Tariffs | Lumière Grand Hotel Admin"
+        description="Manage confirmed nightly room tariffs and rate on request options."
+      />
       {/* Header */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between pb-6 border-b border-white/10 gap-4">
         <div>

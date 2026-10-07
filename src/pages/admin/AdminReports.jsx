@@ -10,6 +10,7 @@ import {
   BedDouble,
   RefreshCw,
 } from "lucide-react";
+import PageMeta from "../../components/PageMeta";
 
 export default function AdminReports() {
   const [reports, setReports] = useState(null);
@@ -38,6 +39,10 @@ export default function AdminReports() {
   if (loading) {
     return (
       <div className="py-24 text-center">
+        <PageMeta
+          title="Financial & Occupancy Reports | Lumière Grand Hotel Admin"
+          description="Executive analytics on monthly revenue trajectory, occupancy rates, and booking volume."
+        />
         <div className="w-10 h-10 border-2 border-amber-400 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
         <p className="text-xs uppercase tracking-[3px] text-gray-400">Compiling financial &amp; stay analytics...</p>
       </div>
@@ -49,6 +54,10 @@ export default function AdminReports() {
 
   return (
     <div>
+      <PageMeta
+        title="Financial & Occupancy Reports | Lumière Grand Hotel Admin"
+        description="Executive analytics on monthly revenue trajectory, occupancy rates, and booking volume."
+      />
       {/* Header */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between pb-6 border-b border-white/10 gap-4">
         <div>

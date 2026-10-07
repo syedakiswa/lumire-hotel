@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { ChevronDown } from "lucide-react";
+import PageMeta from "./PageMeta";
 
 // Only images that already exist in /public.
 // Leave a value as "" to show the clean dark layout instead of an image.
@@ -81,6 +82,10 @@ function DarkVisual({ className = "" }) {
 function AboutUs() {
   return (
     <div className="bg-black text-white">
+      <PageMeta
+        title="About Us & Our Heritage | Lumière Grand Hotel"
+        description="Discover the timeless philosophy, hospitality heritage, and commitment to refined luxury that define Lumière Grand Hotel."
+      />
 
       {/* ================= 1. HERO ================= */}
       <section

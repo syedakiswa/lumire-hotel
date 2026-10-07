@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
 import { Lock, Mail, User, Phone, AlertCircle, ArrowLeft } from "lucide-react";
+import PageMeta from "../components/PageMeta";
 
 export default function Signup() {
   const [name, setName] = useState("");
@@ -50,6 +51,10 @@ export default function Signup() {
 
   return (
     <div className="min-h-screen bg-black text-white flex flex-col justify-center py-12 sm:px-6 lg:px-8 relative overflow-hidden">
+      <PageMeta
+        title="Create Your Account | Lumière Grand Hotel"
+        description="Join the Lumière Grand circle of distinguished guests and unlock exclusive privileges, personalized amenities, and reservations."
+      />
       <div className="absolute inset-0 bg-radial from-amber-500/5 via-transparent to-transparent pointer-events-none"></div>
 
       <div className="sm:mx-auto sm:w-full sm:max-w-md relative z-10 px-4">
