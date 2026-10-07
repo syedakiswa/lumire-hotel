@@ -1,0 +1,84 @@
+[
+  {
+    "_id": "660000000000000000000001",
+    "name": "Presidential Suite",
+    "slug": "presidential-suite",
+    "category": "Luxury Suite",
+    "description": "An extraordinary suite designed for the ultimate luxury experience with elegant interiors and exceptional comfort.",
+    "price": null,
+    "priceOnRequest": true,
+    "images": [
+      "/room.jpeg",
+      "/bathroom.jpeg",
+      "/roomsbg.png"
+    ],
+    "amenities": [
+      "Free Wi-Fi",
+      "Air Conditioning",
+      "Smart TV",
+      "Mini Bar",
+      "Room Service",
+      "Luxury Bathroom",
+      "24/7 Concierge",
+      "City View"
+    ],
+    "bedType": "King Bed",
+    "view": "City View",
+    "maxGuests": 2,
+    "available": true,
+    "createdAt": "2026-10-07T08:22:22.088Z"
+  },
+  {
+    "_id": "660000000000000000000002",
+    "name": "Deluxe King",
+    "slug": "deluxe-king",
+    "category": "Luxury Room",
+    "description": "A beautifully appointed room offering modern comfort, sophisticated design, and a peaceful atmosphere.",
+    "price": null,
+    "priceOnRequest": true,
+    "images": [
+      "/room.jpeg",
+      "/bathroom.jpeg"
+    ],
+    "amenities": [
+      "Free Wi-Fi",
+      "Air Conditioning",
+      "Smart TV",
+      "Room Service",
+      "Luxury Bathroom"
+    ],
+    "bedType": "King Bed",
+    "view": "Garden View",
+    "maxGuests": 2,
+    "available": true,
+    "createdAt": "2026-10-07T08:22:22.088Z"
+  },
+  {
+    "_id": "660000000000000000000003",
+    "name": "Executive Suite",
+    "slug": "executive-suite",
+    "category": "Luxury Suite",
+    "description": "Sophisticated interiors, generous space, and refined amenities designed for an elevated stay.",
+    "price": null,
+    "priceOnRequest": true,
+    "images": [
+      "/room.jpeg",
+      "/bathroom.jpeg",
+      "/roomsbg.png"
+    ],
+    "amenities": [
+      "Free Wi-Fi",
+      "Air Conditioning",
+      "Smart TV",
+      "Mini Bar",
+      "Room Service",
+      "Luxury Bathroom",
+      "24/7 Concierge"
+    ],
+    "bedType": "King Bed",
+    "view": "City View",
+    "maxGuests": 3,
+    "available": true,
+    "createdAt": "2026-10-07T08:22:22.088Z"
+  }
+]

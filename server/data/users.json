@@ -1,0 +1,11 @@
+[
+  {
+    "_id": "660000000000000000000000",
+    "name": "Lumière Hotel Administrator",
+    "email": "admin@lumierehotel.com",
+    "phone": "+1 (800) 586-4373",
+    "passwordHash": "$2b$10$IZHS7n4sMsqP7zBRFJnuVuBHW6hO8/M9KfmNeBcjAhGeVlqwKx8su",
+    "role": "admin",
+    "createdAt": "2026-10-07T08:22:22.088Z"
+  }
+]
