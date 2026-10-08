@@ -10,14 +10,6 @@ const exploreLinks = [
   { name: "Gallery", to: "/gallery" },
 ];
 
-const serviceLinks = [
-  { name: "Reservations", to: "/rooms" },
-  { name: "Contact Us", to: "/contact" },
-  { name: "My Bookings", to: "/bookings" },
-  { name: "FAQ", to: "/faq" },
-  { name: "Terms & Conditions", to: "/terms" },
-  { name: "Privacy Policy", to: "/privacy" },
-];
 
 const socials = [
   {
@@ -110,21 +102,6 @@ function Footer() {
             </ul>
           </div>
 
-          {/* Guest Services */}
-          <div data-aos="fade-up" data-aos-delay="200">
-            <h4 className="text-amber-400 uppercase tracking-[3px] text-xs mb-6">
-              Guest Services
-            </h4>
-            <ul className="space-y-3 text-sm text-gray-400">
-              {serviceLinks.map((link) => (
-                <li key={link.name}>
-                  <Link to={link.to} className="hover:text-amber-400 transition">
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
 
           {/* Contact */}
           <div data-aos="fade-up" data-aos-delay="300">
